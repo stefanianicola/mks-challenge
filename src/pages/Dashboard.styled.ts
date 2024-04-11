@@ -10,3 +10,11 @@ export const DashboardContainer = styled.div`
   overflow-y: auto;
   background-color: ${(props) => props.theme.bg};
 `;
+
+export const TopPattern = styled.div`
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 30vh;
+background-color: ${(props) => props.theme.topBgPattern};
+`
