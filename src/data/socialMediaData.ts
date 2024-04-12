@@ -52,7 +52,7 @@ export const socialMediaData: SocialMediaProps[] = [
         socialMediaKey: "instagram",
         socialIcon: InstagramIcon,
         username: '@realnathanf',
-        counter: 11000,
+        counter: '11k',
         description: 'Followers',
         todayCounter: 1099,
         positive: true,
@@ -64,7 +64,7 @@ export const socialMediaData: SocialMediaProps[] = [
         },
         {
             statisticKey: 'Profile Views',
-            counter: 52000,
+            counter: '52k',
             percentage: 1375,
         },
         ]

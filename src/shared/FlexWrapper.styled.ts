@@ -2,7 +2,7 @@ import styled from 'styled-components';
 //Wrapper to elements with display flex
 export interface FlexProps {
     direction: 'column' | 'row',
-    items?: 'start' | 'center' | 'end',
+    items?: 'start' | 'center' | 'end' | 'baseline',
     space?: 'space-between'
 }
 

@@ -5,7 +5,7 @@ export interface SocialMediaProps {
     socialMediaKey: string;
     socialIcon: string;
     username: string;
-    counter: number; //| string
+    counter: number | string;
     description: string;
     todayCounter: number;
     borderTopColor: string | string[];
@@ -15,7 +15,10 @@ export interface SocialMediaProps {
 }
 
 export interface OverviewProps {
+    id?: string;
+    icon?: string;
+    positive?: boolean;
     statisticKey: string;
-    counter: number;
+    counter: number | string;
     percentage: number;
 }

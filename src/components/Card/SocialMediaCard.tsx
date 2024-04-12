@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { ResponsiveGrid } from '../../../shared/ResponsiveGrid.styled';
-import { GradientBorder, WidgetWrapper } from './SocialMediaCard.styled';
-import TextElement from '../../Text/TextElement';
-import { socialMediaData } from '../../../data/socialMediaData';
-import { Icon } from '../../icon/icon.styled';
-import { FlexWrapper } from '../../../shared/FlexWrapper.styled';
-import { ListCardWrapper } from '../Overview/OverviewCard.styled';
+import React from 'react';
+import { ResponsiveGrid } from '../../shared/ResponsiveGrid.styled';
+import { GradientBorder, WidgetWrapper } from './Card.styled';
+import TextElement from '../Text/TextElement';
+import { Icon } from '../icon/icon.styled';
+import { FlexWrapper } from '../../shared/FlexWrapper.styled';
+import { ListCardWrapper } from './Card.styled';
+import { useSocialMedia } from '../../context/SocialMediaContext';
 
 
 const SocialMediaCard: React.FC = () => {
 
-    const [data, setData] = useState(socialMediaData);
+  const {socialMedia} = useSocialMedia();
 
   return (
     <ListCardWrapper>
     <ResponsiveGrid>
-    {data.map((item, index) => (
+    {socialMedia.map((item, index) => (
       
         <WidgetWrapper key={index} items='center'>
         <GradientBorder colortop={item.borderTopColor}/>

@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-import { primaryColor } from '../../../shared/Variables.styled';
+import { primaryColor } from '../../shared/Variables.styled';
 
 interface WidgetProps {
   colortop?: string | string[];
   items?: 'start' | 'center' | 'end',
 }
+
+//wrapper  List
+export const ListCardWrapper = styled.div`
+width: 100%;
+`;
 
 
 // Grid item test
