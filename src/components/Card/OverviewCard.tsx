@@ -24,7 +24,7 @@ const OverviewCard: React.FC = () => {
           </FlexWrapper>
           <FlexWrapper direction='row' space='space-between' items='baseline'>
         <TextElement variant="primary" weight="bold" element="p" size='large'>{item.counter}</TextElement>
-        <TextElement positive={item.positive} weight="bold" element="p" size='small'>{item.percentage}%</TextElement>
+        <TextElement positive={item.positive?.toString()}  percentage='true' weight="bold" element="p" size='small'>{item.percentage}</TextElement>
           </FlexWrapper>
          
         </WidgetWrapper>

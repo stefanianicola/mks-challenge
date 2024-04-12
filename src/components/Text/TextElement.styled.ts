@@ -11,9 +11,9 @@ export interface TextElementProps {
     variant?: 'primary' | 'secondary' | 'green' | 'red';
     children: ReactNode;
     element?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'label' | 'p' | 'span';
-    letterSpacing?: boolean;
-    positive?: boolean;
-    percentage?: boolean;
+    letterSpacing?: string;
+    positive?: string;
+    percentage?: string
 }
 
 const textSizes = {
@@ -41,7 +41,7 @@ font-size: ${(props) => {
 font-weight: ${(props) => (props.weight === 'regular' ? 400 : 700)};
 color: ${(props) => {
         if (props.positive !== undefined) {
-            return props.positive ? primaryColor.limeGreen : primaryColor.brightRed;
+            return props.positive === 'true' ? primaryColor.limeGreen : primaryColor.brightRed;
         }
         switch (props.variant) {
             case 'primary':
@@ -56,8 +56,8 @@ color: ${(props) => {
                 return 'inherit';
         }
     }};
-letter-spacing: ${(props) => (props.letterSpacing ? '.5rem' : '0')};
-text-transform: ${(props) => (props.letterSpacing ? 'uppercase' : 'inherit')};
+letter-spacing: ${(props) => (props.letterSpacing === 'true' ? '.5rem' : '0')};
+text-transform: ${(props) => (props.letterSpacing === 'true' ? 'uppercase' : 'inherit')};
 display: flex;
 align-items: center;
 margin-top: ${(props) => (props.element === 'p' ? '2rem' : '0')};
