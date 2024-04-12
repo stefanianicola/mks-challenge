@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ToggleWrapper, Slider, HiddenCheckbox } from './Toggle.styled';
-import TextElement from '../Text/TextElement';
 
 interface ToggleProps {
   checkedValue?: boolean;

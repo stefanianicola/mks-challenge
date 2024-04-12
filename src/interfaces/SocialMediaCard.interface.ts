@@ -9,7 +9,7 @@ export interface SocialMediaProps {
     description: string;
     todayCounter: number;
     borderTopColor: string | string[];
-    // borderGradient?: boolean;
+    positive?: boolean;
     overview: OverviewProps[]
 
 }

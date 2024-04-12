@@ -6,6 +6,7 @@ export const DashboardContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  padding: 0 20rem;
   align-items: center;
   overflow-y: auto;
   background-color: ${(props) => props.theme.bg};

@@ -3,6 +3,7 @@ import TwitterIcon from "../assets/icon-twitter.svg";
 import InstagramIcon from "../assets/icon-instagram.svg";
 import YoutubeIcon from "../assets/icon-youtube.svg";
 import { SocialMediaProps } from "../interfaces/SocialMediaCard.interface";
+import { primaryColor } from "../shared/Variables.styled";
 
 export const socialMediaData: SocialMediaProps[] = [
     {
@@ -12,7 +13,8 @@ export const socialMediaData: SocialMediaProps[] = [
         counter: 1987,
         description: 'Followers',
         todayCounter: 12,
-        borderTopColor: '',
+        positive: true,
+        borderTopColor: primaryColor.facebook,
         overview: [{
             statisticKey: 'Page Views',
             counter: 87,
@@ -32,7 +34,8 @@ export const socialMediaData: SocialMediaProps[] = [
         counter: 1044,
         description: 'Followers',
         todayCounter: 99,
-        borderTopColor: '',
+        positive: true,
+        borderTopColor: primaryColor.twitter,
         overview: [{
             statisticKey: 'Retweets',
             counter: 117,
@@ -52,7 +55,8 @@ export const socialMediaData: SocialMediaProps[] = [
         counter: 11000,
         description: 'Followers',
         todayCounter: 1099,
-        borderTopColor: '',
+        positive: true,
+        borderTopColor: 'instagram',
         overview: [{
             statisticKey: 'Likes',
             counter: 5462,
@@ -72,7 +76,8 @@ export const socialMediaData: SocialMediaProps[] = [
         counter: 8239,
         description: 'Subscribers',
         todayCounter: 144,
-        borderTopColor: '',
+        positive: false,
+        borderTopColor: primaryColor.youtube,
         overview: [{
             statisticKey: 'Likes',
             counter: 107,

@@ -4,6 +4,7 @@ export const primaryColor = {
     brightRed: 'hsl(356, 69%, 56%)',
     facebook: 'hsl(195, 100%, 50%)',
     twitter: 'hsl(203, 89%, 53%)',
+    instagram: 'linear-gradient (to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
     instagramStart: 'hsl(37, 97%, 70%)',
     instagramEnd: 'hsl(329, 70%, 58%)',
     youtube: 'hsl(348, 97%, 39%)',

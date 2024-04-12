@@ -14,9 +14,9 @@ const Header: React.FC<HeaderProps> = ({themeSt, toggleTheme}) => {
        <HeaderWrapper>
         <FlexWrapper direction="column" >
        <TextElement variant="primary"  weight="bold" element="h3">Social Media Dashboard</TextElement>
-       <TextElement variant='secondary'  weight="bold" element="p">Total Followers: 23,004</TextElement>
+       <TextElement variant='secondary'  weight="bold" element="p" size="medium">Total Followers: 23,004</TextElement>
        </FlexWrapper>
-       <FlexWrapper direction="row" >
+       <FlexWrapper direction="row" items="center">
        <TextElement variant={themeSt === 'darkTheme' ? 'primary' :'secondary'}  weight="bold" element="span">Dark Mode</TextElement>
        <Toggle onChange={toggleTheme} />
        </FlexWrapper>
