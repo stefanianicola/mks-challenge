@@ -17,20 +17,20 @@ const TextElement = ({
 }: TextElementProps) => {
   const renderIcon = positive === 'true' ? IconUp : IconDown;
   return (
-      <TextElements
-          element={element}
-          size={size}
-          weight={weight}
-          variant={variant}
-          letterSpacing={letterSpacing}
-          positive={positive}
-      >
-          {positive !== undefined &&  (
-              <img src={renderIcon}/>
-          )}
-          {children}
-          {percentage === 'true' && '%'}
-      </TextElements>
+    <TextElements
+      element={element}
+      size={size}
+      weight={weight}
+      variant={variant}
+      letterSpacing={letterSpacing}
+      positive={positive}
+    >
+      {positive !== undefined &&  (
+        <img src={renderIcon}/>
+      )}
+      {children}
+      {percentage === 'true' && '%'}
+    </TextElements>
   );
 };
 

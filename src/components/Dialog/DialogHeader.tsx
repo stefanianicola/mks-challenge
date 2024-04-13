@@ -19,49 +19,49 @@ const DialogHeader: React.FC<DialogHeaderProps> = ({ data }) => {
     const total = allFollowers.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
       sumFollowers);
-     setSumFollowers(total);
+    setSumFollowers(total);
   },[])
   
   
   return (
     <DataHeaderWrapper>
   
-    <TextElement variant="primary" weight="bold" element="h3" size='large' >
-      {data?.socialMediaKey} {data?.description}
-    </TextElement>
+      <TextElement variant="primary" weight="bold" element="h3" size='large' >
+        {data?.socialMediaKey} {data?.description}
+      </TextElement>
   
-    <FlexWrapper direction='row' mt='large' mb='large' items='center'>
-      <IconPrincipalCard src={data?.socialIcon}/>
-      <TextElement variant="secondary" weight="bold" element="span" size='medium'>{data?.username}</TextElement>
-    </FlexWrapper>
-  
-    <FlexWrapper direction='row' items='center'>
-  
-      <FlexWrapper direction='row' items='center' mr='large'>
-        <TextElement variant="secondary" weight="bold" element="span" size='xxLarge' >{data?.counter}</TextElement>
-        <FlexWrapper direction='column' >
-          <TextElement variant="secondary" weight="regular" element="span" size='medium' >Total</TextElement>
-          <TextElement variant="secondary" weight="regular" element="span" size='medium' >{data?.description}</TextElement>
-        </FlexWrapper>
+      <FlexWrapper direction='row' mt='large' mb='large' items='center'>
+        <IconPrincipalCard src={data?.socialIcon}/>
+        <TextElement variant="secondary" weight="bold" element="span" size='medium'>{data?.username}</TextElement>
       </FlexWrapper>
   
-      <FlexWrapper direction='row' items='center' mr='large'>
-        <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{sumFollowers}</TextElement>
-        <FlexWrapper direction='column' >
-          <TextElement variant="secondary" weight="regular" element="span" size='medium'>New {data?.description}</TextElement>
-          <TextElement variant="secondary" weight="regular" element="span" size='medium'>in the past 10 days</TextElement>
+      <FlexWrapper direction='row' items='center'>
+  
+        <FlexWrapper direction='row' items='center' mr='large'>
+          <TextElement variant="secondary" weight="bold" element="span" size='xxLarge' >{data?.counter}</TextElement>
+          <FlexWrapper direction='column' >
+            <TextElement variant="secondary" weight="regular" element="span" size='medium' >Total</TextElement>
+            <TextElement variant="secondary" weight="regular" element="span" size='medium' >{data?.description}</TextElement>
+          </FlexWrapper>
         </FlexWrapper>
-      </FlexWrapper>
+  
+        <FlexWrapper direction='row' items='center' mr='large'>
+          <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{sumFollowers}</TextElement>
+          <FlexWrapper direction='column' >
+            <TextElement variant="secondary" weight="regular" element="span" size='medium'>New {data?.description}</TextElement>
+            <TextElement variant="secondary" weight="regular" element="span" size='medium'>in the past 10 days</TextElement>
+          </FlexWrapper>
+        </FlexWrapper>
           
           
-      <FlexWrapper direction='row' items='center' mr='large'>
-        <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{data?.todayCounter}</TextElement>
-        <FlexWrapper direction='column' >
+        <FlexWrapper direction='row' items='center' mr='large'>
+          <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{data?.todayCounter}</TextElement>
+          <FlexWrapper direction='column' >
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>New {data?.description}</TextElement>
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>TODAY</TextElement>
+          </FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>
-    </FlexWrapper>
     </DataHeaderWrapper>
   );
 };

@@ -7,8 +7,8 @@ function App() {
 
   return (
     <SocialMediaProvider>
-    <GlobalStyle/>
-     <Dashboard/>
+      <GlobalStyle/>
+      <Dashboard/>
     </SocialMediaProvider>
   )
 }

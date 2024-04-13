@@ -16,13 +16,13 @@ const CustomTooltip = ({
   payload,
 }: TooltipProps<ValueType, NameType>) => {
   if (active) {
-  return (
+    return (
       <CustomTooltipContainer>
-          <TextElement element="span" weight="regular" size="small" >
+        <TextElement element="span" weight="regular" size="small" >
           {`${payload?.[0].value} new followers`}
-          </TextElement>
+        </TextElement>
       </CustomTooltipContainer>
-  );
+    );
   }
 
   return null;
@@ -50,18 +50,18 @@ const Chart: React.FC<ChartProps>= ({data}) => {
   return (
     
     <FlexWrapper direction='column' mt='large' ref={chartContainerRef} style={{ width: '100%', height: '400px' }}>
-       <TextElementChart variant="secondary" weight="regular" element="span" size='large'>May 4 - May 13</TextElementChart>
-       <FlexWrapper direction='row' mt='large'>
-       <ResponsiveContainer  width={chartSize.width} height={chartSize.height} >
-    <LineChart width={chartSize.width} height={chartSize.height} data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
-      <Line type="monotone" dataKey="amountFollowers" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="date" style={fontStyles} />
-      <YAxis dataKey="amountFollowers" style={fontStyles}/>
-      <Tooltip  content={<CustomTooltip/>} allowEscapeViewBox={{ y: true }} />
-    </LineChart>
-    </ResponsiveContainer>
-    </FlexWrapper>
+      <TextElementChart variant="secondary" weight="regular" element="span" size='large'>May 4 - May 13</TextElementChart>
+      <FlexWrapper direction='row' mt='large'>
+        <ResponsiveContainer  width={chartSize.width} height={chartSize.height} >
+          <LineChart width={chartSize.width} height={chartSize.height} data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
+            <Line type="monotone" dataKey="amountFollowers" stroke="#8884d8" />
+            <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+            <XAxis dataKey="date" style={fontStyles} />
+            <YAxis dataKey="amountFollowers" style={fontStyles}/>
+            <Tooltip  content={<CustomTooltip/>} allowEscapeViewBox={{ y: true }} />
+          </LineChart>
+        </ResponsiveContainer>
+      </FlexWrapper>
     </FlexWrapper>
    
   )

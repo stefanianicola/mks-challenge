@@ -9,23 +9,23 @@ import OverviewCard from "../components/Card/OverviewCard";
 
 const Dashboard: React.FC = () => {
 
-    const [theme, setTheme] = useState(lightTheme);
+  const [theme, setTheme] = useState(lightTheme);
 
-    const toggleTheme = () => {
-      setTheme(theme === lightTheme ? darkTheme : lightTheme);
-    };
-
-    return (
-      <ThemeProvider theme={theme}>
-       <DashboardContainer>
-       <TopPattern/>
-       <Header  toggleTheme={toggleTheme}/>
-      <SocialMediaCard/>
-      <OverviewCard/>
-        </DashboardContainer>
-      </ThemeProvider>
-    );
+  const toggleTheme = () => {
+    setTheme(theme === lightTheme ? darkTheme : lightTheme);
   };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <DashboardContainer>
+        <TopPattern/>
+        <Header  toggleTheme={toggleTheme}/>
+        <SocialMediaCard/>
+        <OverviewCard/>
+      </DashboardContainer>
+    </ThemeProvider>
+  );
+};
   
-  export default Dashboard;
+export default Dashboard;
 

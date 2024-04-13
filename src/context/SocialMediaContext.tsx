@@ -9,6 +9,7 @@ type SocialMediaContextType = {
   setSocialMedia: React.Dispatch<React.SetStateAction<SocialMediaProps[]>>;
   overviewData: OverviewProps[];
   setOverviewData: React.Dispatch<React.SetStateAction<OverviewProps[]>>;
+  
 };
 
 const SocialMediaContext = createContext<SocialMediaContextType>({
@@ -19,21 +20,21 @@ const SocialMediaContext = createContext<SocialMediaContextType>({
 });
 
 
-  // Proveedor del contexto que envolverá a los componentes
+
 export const SocialMediaProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [socialMedia, setSocialMedia] = useState<SocialMediaProps[]>(socialMediaData);
   const [overviewData, setOverviewData] = useState<OverviewProps[]>([]);
 
   useEffect(()=>{
-  let overview = socialMedia?.map((item)=> {
-  return item.overview.map((ov)=> {
-    ov.id = item.socialMediaKey
-    ov.icon = item.socialIcon
-    ov.positive = item.positive
-    return ov
-  }).flat()
-  }).flat()
-  setOverviewData(overview)
+    const overview = socialMedia?.map((item)=> {
+      return item.overview.map((ov)=> {
+        ov.id = item.socialMediaKey
+        ov.icon = item.socialIcon
+        ov.positive = item.positive
+        return ov
+      }).flat()
+    }).flat()
+    setOverviewData(overview)
   },[])
 
   return (
