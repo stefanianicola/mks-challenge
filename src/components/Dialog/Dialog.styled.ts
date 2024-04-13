@@ -13,21 +13,48 @@ export const DialogContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 `;
 // Dialog content
 export const DialogContent = styled.div`
 width: 70%;
-height: 70%;
+height: 75%;
 position: relative;
   background-color: ${(props) => props.theme.bg};
   border-radius: 2rem;
 `;
+
 // Dialog content child data
 export const DialogContentChild = styled.div`
 position: relative;
 z-index: 1000;
 `;
-
-export const TopPatternDialog = styled(TopPattern)`
+//top color in modal
+export const DialogTopPattern = styled(TopPattern)`
+height: 25vh;
 border-radius: 2rem 2rem 0 0;
+`
+//button
+export const DialogClose = styled.button`
+position: absolute;
+border:none;
+background: transparent;
+right: 4rem;
+top: 4rem;
+font-size: 1.8rem;
+cursor:pointer;
+color: ${(props) => props.theme.primaryText};
+`
+
+
+
+// data style in modal
+
+export const DataWrapper = styled.div`
+padding: 5rem;
+`
+
+export const DataHeaderWrapper = styled.div`
+margin-left: 2.5rem;
+height: 20vh;
 `

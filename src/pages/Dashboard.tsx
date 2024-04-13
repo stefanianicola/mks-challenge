@@ -22,8 +22,6 @@ const Dashboard: React.FC = () => {
        <TopPattern/>
        <Header  toggleTheme={toggleTheme}/>
       <SocialMediaCard/>
-      <FlexWrapper direction="row" items="start">
-      </FlexWrapper>
       <OverviewCard/>
         </DashboardContainer>
       </ThemeProvider>

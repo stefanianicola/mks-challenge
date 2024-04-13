@@ -6,7 +6,7 @@ import { primaryColor } from '../../shared/Variables.styled';
 
 //Create interface to texts
 export interface TextElementProps {
-    size?: 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+    size?: 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge' | 'xxLarge';
     weight: 'regular' | 'bold';
     variant?: 'primary' | 'secondary' | 'green' | 'red';
     children: ReactNode;
@@ -22,6 +22,7 @@ const textSizes = {
     medium: '1.8rem',
     large: '2.8rem',
     xLarge: '4rem',
+    xxLarge: '5rem',
 };
 
 //Create dinamic text component, defining with the element the html tag that will be used and with the props the size, color, wight...
@@ -80,12 +81,14 @@ margin-right: ${(props) => (props.element === 'span' ? '2rem' : '0')};
     font-size: ${(props) => {
         switch (props.element) {
             case 'h3':
-                return textSizes['large'];
+                if (props.size !== undefined) return textSizes[props.size]
+                else return textSizes['large'];
             case 'p':
                 if (props.size !== undefined) return textSizes[props.size]
                 else return textSizes['medium'];
             default:
-                return textSizes['medium'];
+                if (props.size !== undefined) return textSizes[props.size]
+                else return textSizes['medium'];
         }
     }};
     }

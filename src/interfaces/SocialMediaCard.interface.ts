@@ -1,3 +1,4 @@
+import { ChartData } from "./ChartData.interface";
 
 
 export interface SocialMediaProps {
@@ -11,7 +12,7 @@ export interface SocialMediaProps {
     borderTopColor: string | string[];
     positive?: boolean;
     overview: OverviewProps[]
-
+    chart: ChartData[]
 }
 
 export interface OverviewProps {

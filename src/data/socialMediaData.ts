@@ -7,7 +7,7 @@ import { primaryColor } from "../shared/Variables.styled";
 
 export const socialMediaData: SocialMediaProps[] = [
     {
-        socialMediaKey: "facebook",
+        socialMediaKey: "Facebook",
         socialIcon: FacebookIcon,
         username: '@nathanf',
         counter: 1987,
@@ -25,10 +25,52 @@ export const socialMediaData: SocialMediaProps[] = [
             counter: 52,
             percentage: 2,
         },
+        ],
+        chart: [
+            {
+                date: '4',
+                amountFollowers: 12
+            },
+            {
+                date: '5',
+                amountFollowers: 2
+            },
+            {
+                date: '6',
+                amountFollowers: 17
+            },
+            {
+                date: '7',
+                amountFollowers: 9
+            },
+            {
+                date: '8',
+                amountFollowers: 25
+            },
+            {
+                date: '9',
+                amountFollowers: 1
+            },
+            {
+                date: '10',
+                amountFollowers: 6
+            },
+            {
+                date: '11',
+                amountFollowers: 9
+            },
+            {
+                date: '12',
+                amountFollowers: 7
+            },
+            {
+                date: '13',
+                amountFollowers: 12
+            }
         ]
     },
     {
-        socialMediaKey: "twitter",
+        socialMediaKey: "Twitter",
         socialIcon: TwitterIcon,
         username: '@nathanf',
         counter: 1044,
@@ -46,10 +88,52 @@ export const socialMediaData: SocialMediaProps[] = [
             counter: 507,
             percentage: 553,
         },
+        ],
+        chart: [
+            {
+                date: '4',
+                amountFollowers: 12
+            },
+            {
+                date: '5',
+                amountFollowers: 2
+            },
+            {
+                date: '6',
+                amountFollowers: 17
+            },
+            {
+                date: '7',
+                amountFollowers: 19
+            },
+            {
+                date: '8',
+                amountFollowers: 25
+            },
+            {
+                date: '9',
+                amountFollowers: 19
+            },
+            {
+                date: '10',
+                amountFollowers: 65
+            },
+            {
+                date: '11',
+                amountFollowers: 9
+            },
+            {
+                date: '12',
+                amountFollowers: 7
+            },
+            {
+                date: '13',
+                amountFollowers: 12
+            }
         ]
     },
     {
-        socialMediaKey: "instagram",
+        socialMediaKey: "Instagram",
         socialIcon: InstagramIcon,
         username: '@realnathanf',
         counter: '11k',
@@ -67,10 +151,52 @@ export const socialMediaData: SocialMediaProps[] = [
             counter: '52k',
             percentage: 1375,
         },
+        ],
+        chart: [
+            {
+                date: '4',
+                amountFollowers: 12
+            },
+            {
+                date: '5',
+                amountFollowers: 2
+            },
+            {
+                date: '6',
+                amountFollowers: 17
+            },
+            {
+                date: '7',
+                amountFollowers: 19
+            },
+            {
+                date: '8',
+                amountFollowers: 25
+            },
+            {
+                date: '9',
+                amountFollowers: 11
+            },
+            {
+                date: '10',
+                amountFollowers: 6
+            },
+            {
+                date: '11',
+                amountFollowers: 94
+            },
+            {
+                date: '12',
+                amountFollowers: 7
+            },
+            {
+                date: '13',
+                amountFollowers: 12
+            }
         ]
     },
     {
-        socialMediaKey: "youtube",
+        socialMediaKey: "Youtube",
         socialIcon: YoutubeIcon,
         username: 'Nathan F.',
         counter: 8239,
@@ -88,6 +214,48 @@ export const socialMediaData: SocialMediaProps[] = [
             counter: 1407,
             percentage: 12,
         },
+        ],
+        chart: [
+            {
+                date: '4',
+                amountFollowers: 11
+            },
+            {
+                date: '5',
+                amountFollowers: 2
+            },
+            {
+                date: '6',
+                amountFollowers: 7
+            },
+            {
+                date: '7',
+                amountFollowers: 9
+            },
+            {
+                date: '8',
+                amountFollowers: 25
+            },
+            {
+                date: '9',
+                amountFollowers: 1
+            },
+            {
+                date: '10',
+                amountFollowers: 6
+            },
+            {
+                date: '11',
+                amountFollowers: 9
+            },
+            {
+                date: '12',
+                amountFollowers: 7
+            },
+            {
+                date: '13',
+                amountFollowers: 1
+            }
         ]
     },
 

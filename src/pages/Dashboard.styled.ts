@@ -6,10 +6,15 @@ export const DashboardContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  padding: 0 20rem;
+  padding: 0 5rem;
   align-items: center;
-  overflow-y: auto;
   background-color: ${(props) => props.theme.bg};
+  @media screen and (min-width: 768px) {
+    padding: 0 10rem;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0 20rem;
+  }
 `;
 
 export const TopPattern = styled.div`

@@ -6,15 +6,22 @@ import { IconPrincipalCard } from '../icon/icon.styled';
 import { FlexWrapper } from '../../shared/FlexWrapper.styled';
 import { ListCardWrapper } from './Card.styled';
 import { useSocialMedia } from '../../context/SocialMediaContext';
-import Dialog  from '../Dialog/Dialog';
-
+import Dialog from '../Dialog/Dialog';
+import { SocialMediaProps } from '../../interfaces/SocialMediaCard.interface';
+import Chart from '../Chart/Chart';
+import {  DataWrapper } from '../Dialog/Dialog.styled';
+import DialogHeader from '../Dialog/DialogHeader';
 
 const SocialMediaCard: React.FC = () => {
   const {socialMedia} = useSocialMedia();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [itemSelected, setItemSelected] = useState<SocialMediaProps>();
 
-  const handleOpenModal = () => {
+  
+
+  const handleOpenModal = (item:SocialMediaProps) => {
+    setItemSelected(item);
     setIsModalOpen(true);
   };
 
@@ -26,7 +33,7 @@ const SocialMediaCard: React.FC = () => {
     <ListCardWrapper>
     <ResponsiveGrid>
     {socialMedia.map((item, index) => (
-        <WidgetWrapper key={index} items='center' onClick={handleOpenModal}>
+        <WidgetWrapper key={index} items='center' onClick={()=>handleOpenModal(item)}>
         <GradientBorder colortop={item.borderTopColor}/>
         <FlexWrapper direction='row'>
         <IconPrincipalCard src={item.socialIcon}/>
@@ -36,15 +43,25 @@ const SocialMediaCard: React.FC = () => {
           <TextElement variant="secondary" weight="regular" element="p" size='medium' letterSpacing='true' >{item.description}</TextElement>
           <TextElement positive={item.positive?.toString()} weight="bold" element="p" size='xSmall' >{item.todayCounter} Today</TextElement>
         </WidgetWrapper>
-      ))}
-    </ResponsiveGrid>
-    <Dialog isOpen={isModalOpen} onClose={handleCloseModal}>
-      <FlexWrapper direction='column' items='center'>
-      <h2>This is a modal</h2>
-        <p>Modal content goes here...</p>
-      </FlexWrapper>
        
-      </Dialog>
+      
+     ))} 
+
+<Dialog isOpen={isModalOpen} onClose={handleCloseModal}>
+    <DataWrapper>  
+  {
+    //DIALOG HEADER INFORMATION
+    itemSelected !== undefined && (
+      <>
+      <DialogHeader data={itemSelected}/>
+      <Chart data={itemSelected.chart}/>
+      </>
+    )
+  }    
+        </DataWrapper>
+        </Dialog>
+    </ResponsiveGrid>
+     
     </ListCardWrapper>
   
   );
