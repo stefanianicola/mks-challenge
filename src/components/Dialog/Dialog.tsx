@@ -2,7 +2,7 @@ import React from 'react';
 import {DialogClose, DialogContainer,DialogContent, DialogContentChild, DialogTopPattern} from './Dialog.styled';
 import { primaryColor } from '../../shared/Variables.styled';
 
-type DialogProps = {
+export type DialogProps = {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
@@ -15,8 +15,8 @@ const Dialog: React.FC<DialogProps> = ({ isOpen, onClose, children }) => {
 
 
   return (
-    <DialogContainer>
-      <DialogContent  >
+    <DialogContainer  open={isOpen}>
+      <DialogContent   open={isOpen}>
         <DialogTopPattern/>
         <DialogContentChild>
           {children}

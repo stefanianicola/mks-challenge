@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { TopPattern } from '../../pages/Dashboard.styled';
 
 // Dialog container
-export const DialogContainer = styled.div`
+export const DialogContainer = styled.div<{ open: boolean }>`
   position: fixed;
   z-index: 500;
   top: 0;
@@ -13,15 +13,16 @@ export const DialogContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+
 `;
 // Dialog content
-export const DialogContent = styled.div`
+export const DialogContent = styled.div<{ open: boolean }>`
 width: 90%;
 height: 70%;
 position: relative;
   background-color: ${(props) => props.theme.bg};
   border-radius: 2rem;
+  animation: ${({ open }) => (open ? fadeIn : fadeOut)} 0.3s ease-in-out forwards;
 
   @media screen and (min-width: 768px) {
     width: 80%;
@@ -59,7 +60,28 @@ color: ${(props) => props.theme.primaryText};
 }
 `
 
+//Animation
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+`;
 
 // data style in modal
 

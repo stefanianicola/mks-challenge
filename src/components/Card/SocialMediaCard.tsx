@@ -62,7 +62,7 @@ const SocialMediaCard: React.FC = () => {
         ))} 
 
         <Dialog isOpen={isModalOpen} onClose={handleCloseModal}>
-          <DataWrapper>  
+          <DataWrapper ref={modalRef}>  
             {
               //DIALOG HEADER INFORMATION
               itemSelected !== undefined && (
