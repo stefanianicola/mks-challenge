@@ -46,7 +46,7 @@ const DialogHeader: React.FC<DialogHeaderProps> = ({ data }) => {
         </FlexWrapper>
   
         <FlexWrapper direction='row' items='center' mr='large'>
-          <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{sumFollowers}</TextElement>
+          <TextElement positive={data?.positive} weight="bold" element="span" size='xxLarge' >{sumFollowers}</TextElement>
           <FlexWrapper direction='column' >
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>New {data?.description}</TextElement>
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>in the past 10 days</TextElement>
@@ -55,7 +55,7 @@ const DialogHeader: React.FC<DialogHeaderProps> = ({ data }) => {
           
           
         <FlexWrapper direction='row' items='center' mr='large'>
-          <TextElement positive={data?.positive?.toString()} weight="bold" element="span" size='xxLarge' >{data?.todayCounter}</TextElement>
+          <TextElement positive={data?.positive} weight="bold" element="span" size='xxLarge' >{data?.todayCounter}</TextElement>
           <FlexWrapper direction='column' >
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>New {data?.description}</TextElement>
             <TextElement variant="secondary" weight="regular" element="span" size='medium'>TODAY</TextElement>

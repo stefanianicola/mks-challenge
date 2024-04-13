@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({themeSt, toggleTheme}) => {
   return (
     <HeaderWrapper>
       <FlexWrapper direction="column" >
-        <TextElement variant="primary"  weight="bold" element="h3">Social Media Dashboard</TextElement>
+        <TextElement variant="primary"  weight="bold" element="h3" size="large">Social Media Dashboard</TextElement>
         <TextElement variant='secondary'  weight="bold" element="p" size="medium">Total Followers: 23,004</TextElement>
       </FlexWrapper>
       <FlexWrapper direction="row" items="center">

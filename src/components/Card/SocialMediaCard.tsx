@@ -54,8 +54,8 @@ const SocialMediaCard: React.FC = () => {
               <TextElement variant="secondary" weight="bold" element="p" size='small'>{item.username}</TextElement>
             </FlexWrapper>
             <TextElement variant="primary" weight="bold" element="p" size='xLarge' >{item.counter}</TextElement>
-            <TextElement variant="secondary" weight="regular" element="p" size='medium' letterSpacing='true' >{item.description}</TextElement>
-            <TextElement positive={item.positive?.toString()} weight="bold" element="p" size='xSmall' >{item.todayCounter} Today</TextElement>
+            <TextElement variant="secondary" weight="regular" element="p" size='medium' letterSpacing={true} >{item.description}</TextElement>
+            <TextElement positive={item.positive} weight="bold" element="p" size='xSmall' >{item.todayCounter} Today</TextElement>
           </WidgetWrapper>
        
       

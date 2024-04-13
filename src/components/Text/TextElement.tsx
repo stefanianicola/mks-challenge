@@ -15,7 +15,7 @@ const TextElement = ({
   positive,
   percentage
 }: TextElementProps) => {
-  const renderIcon = positive === 'true' ? IconUp : IconDown;
+  const renderIcon = positive === true ? IconUp : IconDown;
   return (
     <TextElements
       element={element}
@@ -29,7 +29,7 @@ const TextElement = ({
         <img src={renderIcon}/>
       )}
       {children}
-      {percentage === 'true' && '%'}
+      {percentage === true && '%'}
     </TextElements>
   );
 };
