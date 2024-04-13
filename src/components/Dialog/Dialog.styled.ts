@@ -17,11 +17,20 @@ export const DialogContainer = styled.div`
 `;
 // Dialog content
 export const DialogContent = styled.div`
-width: 70%;
-height: 75%;
+width: 90%;
+height: 70%;
 position: relative;
   background-color: ${(props) => props.theme.bg};
   border-radius: 2rem;
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    height: 65%;
+  }
+  @media screen and (min-width: 992px) {
+    height: 85%;
+  }
+ 
 `;
 
 // Dialog content child data
@@ -39,11 +48,15 @@ export const DialogClose = styled.button`
 position: absolute;
 border:none;
 background: transparent;
-right: 4rem;
-top: 4rem;
+right: 2rem;
+top: 2rem;
 font-size: 1.8rem;
 cursor:pointer;
 color: ${(props) => props.theme.primaryText};
+@media screen and (min-width: 1440px) {
+  right: 4rem;
+  top: 4rem;
+}
 `
 
 
@@ -51,10 +64,18 @@ color: ${(props) => props.theme.primaryText};
 // data style in modal
 
 export const DataWrapper = styled.div`
-padding: 5rem;
+padding: 2rem;
+
+@media screen and (min-width: 1440px) {
+  padding: 5rem;
+}
 `
 
 export const DataHeaderWrapper = styled.div`
-margin-left: 2.5rem;
+margin-left: 1rem;
 height: 20vh;
+
+@media screen and (min-width: 1440px) {
+  margin-left: 2.5rem;
+}
 `

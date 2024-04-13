@@ -14,6 +14,7 @@ grid-template-columns: repeat(1, 1fr); /* default, 1 column */
     grid-template-columns: repeat(2, 1fr); /* 2 columns medium size */
     }
     
+    
 @media (min-width: 1440px) {
 grid-template-columns: repeat(4, 1fr); /* 4 columns large size */
 }

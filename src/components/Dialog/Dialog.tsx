@@ -10,7 +10,9 @@ type DialogProps = {
 
 
 const Dialog: React.FC<DialogProps> = ({ isOpen, onClose, children }) => {
+ 
   if (!isOpen) return null;
+
 
   return (
     <DialogContainer>

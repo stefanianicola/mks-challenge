@@ -77,18 +77,17 @@ margin-right: ${(props) => (props.element === 'span' ? '2rem' : '0')};
     }};;
   }
 
-  @media screen and (min-width: 1440px) {
+
+
+  @media screen and (min-width: 992px) {
     font-size: ${(props) => {
         switch (props.element) {
             case 'h3':
-                if (props.size !== undefined) return textSizes[props.size]
-                else return textSizes['large'];
+                if (props.size !== undefined) return textSizes[props.size] || textSizes['large'];
             case 'p':
-                if (props.size !== undefined) return textSizes[props.size]
-                else return textSizes['medium'];
+                if (props.size !== undefined) return textSizes[props.size] || textSizes['medium'];
             default:
-                if (props.size !== undefined) return textSizes[props.size]
-                else return textSizes['medium'];
+                if (props.size !== undefined) return textSizes[props.size] || textSizes['medium'];
         }
     }};
     }

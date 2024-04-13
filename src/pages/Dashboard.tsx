@@ -5,7 +5,6 @@ import { darkTheme, lightTheme } from "../shared/Theme.styled";
 import Header from "../components/Header/Header";
 import SocialMediaCard from "../components/Card/SocialMediaCard";
 import OverviewCard from "../components/Card/OverviewCard";
-import { FlexWrapper } from "../shared/FlexWrapper.styled";
 
 
 const Dashboard: React.FC = () => {

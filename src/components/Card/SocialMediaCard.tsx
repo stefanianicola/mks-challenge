@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ResponsiveGrid } from '../../shared/ResponsiveGrid.styled';
 import { GradientBorder, WidgetWrapper } from './Card.styled';
 import TextElement from '../Text/TextElement';
@@ -18,8 +18,6 @@ const SocialMediaCard: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [itemSelected, setItemSelected] = useState<SocialMediaProps>();
 
-  
-
   const handleOpenModal = (item:SocialMediaProps) => {
     setItemSelected(item);
     setIsModalOpen(true);
@@ -28,6 +26,22 @@ const SocialMediaCard: React.FC = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      handleCloseModal();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <ListCardWrapper>
