@@ -49,9 +49,9 @@ const SocialMediaCard: React.FC = () => {
         {socialMedia.map((item, index) => (
           <WidgetWrapper key={index} items='center' onClick={()=>handleOpenModal(item)}>
             <GradientBorder colortop={item.borderTopColor}/>
-            <FlexWrapper direction='row'>
+            <FlexWrapper direction='row' items='center'>
               <IconPrincipalCard src={item.socialIcon}/>
-              <TextElement variant="secondary" weight="bold" element="p" size='small'>{item.username}</TextElement>
+              <TextElement variant="secondary" weight="bold" element="span" size='small' >{item.username}</TextElement>
             </FlexWrapper>
             <TextElement variant="primary" weight="bold" element="p" size='xLarge' >{item.counter}</TextElement>
             <TextElement variant="secondary" weight="regular" element="p" size='medium' letterSpacing={true} >{item.description}</TextElement>
