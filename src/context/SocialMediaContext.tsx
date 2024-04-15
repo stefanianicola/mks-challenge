@@ -48,7 +48,7 @@ export const SocialMediaProvider: React.FC<{ children: ReactNode }> = ({ childre
 export const useSocialMedia = () => {
   const context = useContext(SocialMediaContext);
   if (!context) {
-    throw new Error('useUser debe ser usado dentro de un UserProvider');
+    throw new Error('useSocialMedia must be used inside a SocialMediaProvider');
   }
   return context;
 };
